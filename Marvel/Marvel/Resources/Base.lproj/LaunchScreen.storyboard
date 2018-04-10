@@ -19,14 +19,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="marvel_wallpaper" translatesAutoresizingMaskIntoConstraints="NO" id="Ugh-QB-tQt">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="-10" y="-10" width="395" height="687"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Ugh-QB-tQt" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" id="AtH-UA-c9f"/>
+                            <constraint firstItem="Ugh-QB-tQt" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" constant="20" id="AtH-UA-c9f"/>
                             <constraint firstItem="Ugh-QB-tQt" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-10" id="PIF-d9-77j"/>
-                            <constraint firstItem="Ugh-QB-tQt" firstAttribute="height" secondItem="Ze5-6b-2t3" secondAttribute="height" id="cIA-sb-NmU"/>
+                            <constraint firstItem="Ugh-QB-tQt" firstAttribute="height" secondItem="Ze5-6b-2t3" secondAttribute="height" constant="20" id="cIA-sb-NmU"/>
                             <constraint firstItem="Ugh-QB-tQt" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="mu9-fM-OdC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
