@@ -11,6 +11,13 @@ import Alamofire
 import CryptoSwift
 import RxSwift
 
+// MARK: - Protocol
+
+//protocol MVApiRequest {
+//    func getCharacters(offset: Int, count: Int) -> Observable<MVRequestStatus>
+//    func getCharacter(url: String) -> Observable<MVRequestStatus>
+//}
+
 // MARK: - Class
 
 class MVApiRequest {

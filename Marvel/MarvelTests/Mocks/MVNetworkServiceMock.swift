@@ -11,9 +11,11 @@ import Alamofire
 import RxSwift
 @testable import Marvel
 
+// MARK: - Class
+
 class MVNetworkServiceSuccessMock: MVNetworkService {
     func fetch(url: String, method: HTTPMethod, parameters: Parameters?, headers: HTTPHeaders?) -> Observable<MVRequestStatus> {
-        return Observable<ACRequestStatus>.create { observer in
+        return Observable<MVRequestStatus>.create { observer in
             let result = MVNetworkRequestSuccess(body: [:], statusCode: 200)
             observer.onNext(.success(result))
             observer.onCompleted()
@@ -24,7 +26,7 @@ class MVNetworkServiceSuccessMock: MVNetworkService {
 
 class MVNetworkServiceFailMock: MVNetworkService {
     func fetch(url: String, method: HTTPMethod, parameters: Parameters?, headers: HTTPHeaders?) -> Observable<MVRequestStatus> {
-        return Observable<ACRequestStatus>.create { observer in
+        return Observable<MVRequestStatus>.create { observer in
             let error = MVNetworkRequestError("Some error has ocurred.", statusCode: 500)
             observer.onNext(.error(error))
             observer.onCompleted()
