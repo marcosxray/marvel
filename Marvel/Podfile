@@ -10,8 +10,17 @@ target 'Marvel' do
   # Network
   pod 'Alamofire'
 
-  #Loader
+  # JSON
+  pod 'SwiftyJSON'
+
+  # Loader
   pod 'MBProgressHUD'
+
+  # Crypto
+  pod 'CryptoSwift'
+
+  # Image cache
+  pod 'Kingfisher'
 
   # Reactive
   pod 'RxSwift'

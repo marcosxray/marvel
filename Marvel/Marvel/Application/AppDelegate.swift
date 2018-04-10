@@ -12,10 +12,22 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var navigationController: UINavigationController = UINavigationController()
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.backgroundColor = UIColor.white
+        window?.makeKeyAndVisible()
+        window?.rootViewController = self.navigationController
+        
+//        self.navigationController.navigationBar.backgroundColor = UIColor.barColor()
+//        self.navigationController.navigationBar.isOpaque = true
+        // Global layout
+        configureGlobalLayout()
+        MVRouterImplementation.shared.initialize(withNavigation: self.navigationController)
+        
         return true
     }
 
@@ -41,6 +53,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    // MARK: - Global layout
 
+    private func configureGlobalLayout() {
+        UINavigationBar.appearance().isTranslucent = false
+        UINavigationBar.appearance().barTintColor = UIColor.barColor()
+        UINavigationBar.appearance().tintColor = .white
+        UINavigationBar.appearance().titleTextAttributes = [
+            NSAttributedStringKey.foregroundColor: UIColor.white
+        ]
+        
+        UIApplication.shared.statusBarStyle = .lightContent
+    }
 }
 
